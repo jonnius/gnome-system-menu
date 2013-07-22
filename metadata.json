@@ -1,7 +1,7 @@
 { 
   "description": "System menu with:\n\n- About this computer\n- Software Update\n- Software Center\n\n- System Preferences\n- Gnome Tweak Tool\n\n- System Monitor\n- Force quit (Active application)\n\n- Power Off\n- Log Out\n- Lock\n\nExtension Settings:\n\n- Position at the top bar\n- Software Center (Ubuntu software center by default)\n- Remove system buttons from \"user/status\" menu",
   "name": "System Menu",
-  "settings-schema": "org.gnome.shell.extensions.SystemMenu",
+  "settings-schema": "org.gnome.shell.extensions.Menu-System",
   "shell-version": [
     "3.6"
   ],

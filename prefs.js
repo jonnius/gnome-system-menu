@@ -6,7 +6,7 @@ const Local = imports.misc.extensionUtils.getCurrentExtension();
 const Convenience = Local.imports.convenience;
 const Settings = Local.imports.settings;
 
-const guuid = 'XmenuSystem'
+const guuid = 'System-Menu'
 const Gettext = imports.gettext.domain(guuid);
 const _ = Gettext.gettext;
 

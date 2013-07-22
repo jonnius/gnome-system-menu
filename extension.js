@@ -25,7 +25,7 @@ const Panel = imports.ui.panel;
 const Tweener = imports.ui.tweener;
 const GnomeSession = imports.misc.gnomeSession;
 
-const guuid = 'XmenuSystem'
+const guuid = 'System-Menu'
 const Gettext = imports.gettext.domain(guuid);
 const _ = Gettext.gettext;
 const ExtensionUtils = imports.misc.extensionUtils;
