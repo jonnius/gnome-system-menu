@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist gettext-domain="gnome3-XmenuSystem">
+<schema path="/org/gnome/shell/extensions/XmenuSystem/" id="org.gnome.shell.extensions.XmenuSystem">
+	<key type="s" name="settings-json">
+	<default>'
+	{
+		"area": "left",
+		"position": 0,
+		"software": "ubuntu-software-center.desktop",
+		"remove": "yes"
+	}
+	'</default>
+<summary>JSON settings</summary>
+<description>Settings for XmenuSystem configuration.</description>
+</key>
+</schema>
+</schemalist>

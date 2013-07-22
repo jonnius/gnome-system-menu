@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: System Menu Gnome-Shell Extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-22 11:21+0200\n"
+"PO-Revision-Date: 2013-07-22 11:24+0100\n"
+"Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
+"Language-Team: GERMAN <jonatan_zeidler@gmx.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: prefs.js:78
+msgid "Area"
+msgstr "Bereich"
+
+#: prefs.js:80
+msgid "Left"
+msgstr "Links"
+
+#: prefs.js:80
+msgid "Center"
+msgstr "Mitte"
+
+#: prefs.js:80
+msgid "Right"
+msgstr "Rechts"
+
+#: prefs.js:88
+msgid "Position"
+msgstr "Position"
+
+#: prefs.js:93
+msgid "Software center"
+msgstr "Software Center"
+
+#: prefs.js:98
+msgid "Clean user status menu"
+msgstr "Entferne überflüssige Einträge aus dem Nutzermenü"
+
+#: prefs.js:100
+msgid "Yes"
+msgstr "Ja"
+
+#: prefs.js:100
+msgid "No"
+msgstr "Nein"
+
+#: prefs.js:109
+msgid "Save Settings"
+msgstr "Änderungen speichern"
+
+#: extension.js:40
+msgid "About This Computer"
+msgstr "Systeminformationen"
+
+#: extension.js:41
+msgid "Software Update"
+msgstr "Softwareaktualisierung"
+
+#: extension.js:42
+msgid "Software Center"
+msgstr "Software Center"
+
+#: extension.js:44
+msgid "System Preferences"
+msgstr "Systemeinstellungen"
+
+#: extension.js:45
+msgid "Gnome Tweak Tool"
+msgstr "Gnome-Einstellungen"
+
+#: extension.js:47
+msgid "System Monitor"
+msgstr "Systemüberwachung"
+
+#: extension.js:48 extension.js:184 extension.js:188
+msgid "Force Quit"
+msgstr "Erzwinge Beenden von"
+
+#: extension.js:50
+msgid "Power Off"
+msgstr "Herunterfahren"
+
+#: extension.js:51
+msgid "Log Out"
+msgstr "Abmelden"
+
+#: extension.js:52
+msgid "Lock"
+msgstr "Sperren"

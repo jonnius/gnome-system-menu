@@ -1,0 +1,56 @@
+msgid "About This Computer"
+msgstr "About This Computer"
+
+msgid "Software Update"
+msgstr "Software Update"
+
+msgid "Software Center"
+msgstr "Software Center"
+
+msgid "System Preferences"
+msgstr "System Preferences"
+
+msgid "Gnome Tweak Tool"
+msgstr "Gnome Tweak Tool"
+
+msgid "System Monitor"
+msgstr "System Monitor"
+
+msgid "Force Quit"
+msgstr "Force Quit"
+
+msgid "Power Off"
+msgstr "Power Off"
+
+msgid "Log Out"
+msgstr "Log Out"
+
+msgid "Lock"
+msgstr "Lock"
+
+msgid "Left"
+msgstr "Left"
+
+msgid "Center"
+msgstr "Center"
+
+msgid "Right"
+msgstr "Right"
+
+msgid "Area"
+msgstr "Area"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Save Settings"
+msgstr "Save Settings"
+
+msgid "Clean user status menu"
+msgstr "Clean user status menu"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
