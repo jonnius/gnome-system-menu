@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-23 15:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: prefs.js:78
+msgid "Area"
+msgstr ""
+
+#: prefs.js:80
+msgid "Left"
+msgstr ""
+
+#: prefs.js:80
+msgid "Center"
+msgstr ""
+
+#: prefs.js:80
+msgid "Right"
+msgstr ""
+
+#: prefs.js:88
+msgid "Position"
+msgstr ""
+
+#: prefs.js:93
+msgid "Software center"
+msgstr ""
+
+#: prefs.js:98
+msgid "Clean user status menu"
+msgstr ""
+
+#: prefs.js:100
+msgid "Yes"
+msgstr ""
+
+#: prefs.js:100
+msgid "No"
+msgstr ""
+
+#: prefs.js:109
+msgid "Save Settings"
+msgstr ""
+
+#: extension.js:40
+msgid "About This Computer"
+msgstr ""
+
+#: extension.js:41
+msgid "Software Update"
+msgstr ""
+
+#: extension.js:42
+msgid "Software Center"
+msgstr ""
+
+#: extension.js:44
+msgid "System Preferences"
+msgstr ""
+
+#: extension.js:45
+msgid "Gnome Tweak Tool"
+msgstr ""
+
+#: extension.js:47
+msgid "System Monitor"
+msgstr ""
+
+#: extension.js:48 extension.js:184 extension.js:188
+msgid "Force Quit"
+msgstr ""
+
+#: extension.js:50
+msgid "Power Off"
+msgstr ""
+
+#: extension.js:51
+msgid "Log Out"
+msgstr ""
+
+#: extension.js:52
+msgid "Lock"
+msgstr ""

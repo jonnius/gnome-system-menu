@@ -5,7 +5,7 @@ glib-compile-schemas schemas
 DIR="po"
 SUFFIX="po"
 
-xgettext -k_ -kN_ -o $DIR/SystemMenu.pot prefs.js extension.js
+xgettext -k_ -kN_ -o $DIR/System-Menu.pot prefs.js extension.js
 
 for file in $DIR/*.$SUFFIX
 do 
@@ -13,5 +13,5 @@ do
 	lingua=${lingua#*/}
 	msgfmt $file
 	mkdir locale/$lingua/LC_MESSAGES -p
-	mv messages.mo locale/$lingua/LC_MESSAGES/SystemMenu.mo
+	mv messages.mo locale/$lingua/LC_MESSAGES/System-Menu.mo
 done

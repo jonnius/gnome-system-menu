@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist gettext-domain="SystemMenu">
+<schema path="/org/gnome/shell/extensions/SystemMenu/" id="org.gnome.shell.extensions.SystemMenu">
+	<key type="s" name="settings-json">
+	<default>'
+	{
+		"area": "left",
+		"position": 0,
+		"software": "ubuntu-software-center.desktop",
+		"remove": "yes"
+	}
+	'</default>
+<summary>JSON settings</summary>
+<description>Settings for System Menu configuration.</description>
+</key>
+</schema>
+</schemalist>
