@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: System Menu Gnome-Shell Extension\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-22 11:21+0200\n"
-"PO-Revision-Date: 2013-07-22 11:24+0100\n"
+"PO-Revision-Date: 2013-07-23 16:09+0100\n"
 "Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language-Team: GERMAN <jonatan_zeidler@gmx.de>\n"
 "Language: de\n"
@@ -88,7 +88,7 @@ msgstr "Erzwinge Beenden von"
 
 #: extension.js:50
 msgid "Power Off"
-msgstr "Herunterfahren"
+msgstr "Ausschalten"
 
 #: extension.js:51
 msgid "Log Out"
