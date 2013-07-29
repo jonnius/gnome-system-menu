@@ -42,7 +42,7 @@ let save_settings_spacer = null;
 let settings = null;
 let settings_data = null;
 let area = 'left';
-let remove = 'yes';
+let remove = true;
 
 // dummy one
 function init(){
@@ -59,13 +59,8 @@ function onComboChangedArea() {
 	}
 }
 
-function onComboChangedRemove() {
-
-	let activeItem = remove_token_input.get_active();
-	if (activeItem >= 0) {
-		if (activeItem==0) remove = 'yes';
-		if (activeItem==1) remove = 'no';
-	}
+function onSwitchChangedRemove() {
+	remove = remove_token_input.active;
 }
 
 function widget_initliaze()
@@ -96,12 +91,8 @@ function widget_initliaze()
     // remove
     remove_token_box = new Gtk.Box({orientation: Gtk.Orientation.HORIZONTAL, margin_top: 15});
     remove_token_label = new Gtk.Label({label: _("Clean user status menu"), xalign: 0, margin_right: 30 });
-    remove_token_input = new Gtk.ComboBoxText();
-    let removes = [_("Yes"), _("No")];
-    for (let i = 0; i < removes.length; i++)
-    	remove_token_input.append_text(removes[i]);
-    remove_token_input.set_active (0);
-    remove_token_input.connect ('changed', Lang.bind (this, onComboChangedRemove));
+    remove_token_input = new Gtk.Switch({active: remove});
+    remove_token_input.connect ('notify::active', Lang.bind (this, onSwitchChangedRemove));
 
     // save settings box
     save_settings_box = new Gtk.Box({orientation: Gtk.Orientation.VERTICAL });
@@ -180,8 +171,7 @@ function widget_init_values()
     software_token_input.set_text(settings_data.software);
 
     // set the saved remove token value
-    if (settings_data.remove=='yes') remove_token_input.set_active(0);
-    if (settings_data.remove=='no') remove_token_input.set_active(1);
+   remove_token_input.set_active(settings_data.remove);
 }
 
 function buildPrefsWidget()

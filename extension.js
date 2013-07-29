@@ -151,7 +151,7 @@ const extensionObject = new Lang.Class({
 
 				if (excludes.indexOf(label)>-1) {
 
-					if (settings.remove=="yes") {
+					if (settings.remove) {
 
 						if (label=="Power Off"||label=="Log Out") {
 
