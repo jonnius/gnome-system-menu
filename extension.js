@@ -140,7 +140,7 @@ const extensionObject = new Lang.Class({
 		this.actor.connect('button-press-event', Lang.bind(this, this._updateForceQuit));
 
 		// Remove or show "status/user" menu items 
-		let statusMenuItems = Main.panel.statusArea.userMenu.menu._getMenuItems();
+		let statusMenuItems = Main.panel.statusArea.aggregateMenu.menu._getMenuItems();
 
 		for (var x=(statusMenuItems.length-1); x>=0;x--) {
 
