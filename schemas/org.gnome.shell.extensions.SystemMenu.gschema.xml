@@ -6,7 +6,7 @@
 	{
 		"area": "left",
 		"position": 0,
-		"software": "ubuntu-software-center.desktop",
+		"software": "org.gnome.Software.desktop",
 		"remove": "yes"
 	}
 	'</default>
