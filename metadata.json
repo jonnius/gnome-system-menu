@@ -1,11 +1,13 @@
 { 
-  "description": "System menu with:\n\n- About this computer\n- Software Update\n- Software Center\n\n- System Preferences\n- Gnome Tweak Tool\n\n- System Monitor\n- Force quit (Active application)\n\n- Power Off\n- Log Out\n- Lock\n\nExtension Settings:\n\n- Position at the top bar\n- Software Center (Ubuntu software center by default)\n- Remove system buttons from \"user/status\" menu\n\nOriginal extension: https://extensions.gnome.org/extension/653/xmenusystem/\nThe first author does not want to develop it anymore, so I uploaded it here and opened a github repository. Feel free to contribute there.",
+  "description": "System menu with usefull shortcuts",
   "name": "System Menu",
   "settings-schema": "org.gnome.shell.extensions.SystemMenu",
   "shell-version": [
-    "3.6"
+    "3.18",
+    "3.20",
+    "3.22"
   ],
   "url": "http://github.com/jonnius/gnome-system-menu",
-  "uuid": "SystemMenu@jonius", 
-  "version": 1
+  "uuid": "SystemMenu@jonnius.github.com",
+  "version": 2
 }
