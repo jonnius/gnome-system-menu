@@ -39,7 +39,7 @@ let extension;
 let list = [
 { type: "command",	text: _("About This Computer"),	action: ['gnome-control-center','info']		},
 { type: "desktop",	text: _("Software Update"),	action: 'update-manager.desktop'		},
-{ type: "desktop",	text: _("Software Center"),	action: 'ubuntu-software-center.desktop'	},
+{ type: "desktop",	text: _("Software Center"),	action: 'org.gnome.Software.desktop'	},
 { type: "separator" },
 { type: "desktop",	text: _("System Preferences"),	action: 'gnome-control-center.desktop'		},
 { type: "desktop",	text: _("Gnome Tweak Tool"),	action: 'gnome-tweak-tool.desktop'		},
@@ -138,37 +138,6 @@ const extensionObject = new Lang.Class({
 		};
 		
 		this.actor.connect('button-press-event', Lang.bind(this, this._updateForceQuit));
-
-		// Remove or show "status/user" menu items 
-		let statusMenuItems = Main.panel.statusArea.aggregateMenu.menu._getMenuItems();
-
-		for (var x=(statusMenuItems.length-1); x>=0;x--) {
-
-			if (statusMenuItems[x].label!=undefined) {
-
-				var excludes = ["System Settings","Lock","Log Out","Suspend","Switch User","Power Off","Install Updates"];
-				var label = statusMenuItems[x].label.get_text();
-
-				if (excludes.indexOf(label)>-1) {
-
-					if (settings.remove) {
-
-						if (label=="Power Off"||label=="Log Out") {
-
-							statusMenuItems[x].destroy();
-							// actor.hide() does not work! What can I do instead of 'destroy()'?
-
-						} else {
-
-							statusMenuItems[x].actor.hide();
-						}
-					} else {
-
-						statusMenuItems[x].actor.show();
-					}
-				}
-			}
-		}
 	},
 
 	destroy: function() {

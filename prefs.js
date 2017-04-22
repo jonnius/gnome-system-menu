@@ -28,11 +28,6 @@ let software_token_box = null;
 let software_token_label = null;
 let software_token_input = null;
 
-// remove token
-let remove_token_box = null;
-let remove_token_label = null;
-let remove_token_input = null;
-
 // save settings box
 let save_settings_box = null;
 let save_settings_button = null;
@@ -42,7 +37,6 @@ let save_settings_spacer = null;
 let settings = null;
 let settings_data = null;
 let area = 'left';
-let remove = true;
 
 // dummy one
 function init(){
@@ -57,10 +51,6 @@ function onComboChangedArea() {
 		if (activeItem==1) area = 'center';
 		if (activeItem==2) area = 'right';
 	}
-}
-
-function onSwitchChangedRemove() {
-	remove = remove_token_input.active;
 }
 
 function widget_initliaze()
@@ -88,12 +78,6 @@ function widget_initliaze()
     software_token_label = new Gtk.Label({label: _("Software center"), xalign: 0, margin_right: 30 });
     software_token_input = new Gtk.Entry({ hexpand: true, text: "" });
 
-    // remove
-    remove_token_box = new Gtk.Box({orientation: Gtk.Orientation.HORIZONTAL, margin_top: 15});
-    remove_token_label = new Gtk.Label({label: _("Clean user status menu"), xalign: 0, margin_right: 30 });
-    remove_token_input = new Gtk.Switch({active: remove});
-    remove_token_input.connect ('notify::active', Lang.bind (this, onSwitchChangedRemove));
-
     // save settings box
     save_settings_box = new Gtk.Box({orientation: Gtk.Orientation.VERTICAL });
     save_settings_spacer = new Gtk.Box({orientation: Gtk.Orientation.VERTICAL, vexpand: true, hexpand: true });
@@ -114,10 +98,6 @@ function widget_packaging()
     software_token_box.pack_start(software_token_label, false, false, 15);
     software_token_box.pack_start(software_token_input, true, true, 15);
 
-    // remove
-    remove_token_box.pack_start(remove_token_label, false, false, 15);
-    remove_token_box.pack_start(remove_token_input, true, true, 15);
-
     // save settings
     save_settings_box.pack_start(save_settings_spacer, true, true, 15);
     save_settings_box.pack_start(save_settings_button, false, false, 15);
@@ -125,7 +105,6 @@ function widget_packaging()
     main_frame.add(area_token_box);
     main_frame.add(position_box)
     main_frame.add(software_token_box);
-    main_frame.add(remove_token_box);
     main_frame.add(save_settings_box);
 }
 
@@ -147,7 +126,6 @@ function save_settings_button_callback()
     settings_data.area = area;
     settings_data.position = position_input.get_value();
     settings_data.software = software_token_input.get_text();
-    settings_data.remove = remove;
 
     settings.set_string("settings-json", JSON.stringify(settings_data));
 }
@@ -169,9 +147,6 @@ function widget_init_values()
 
     // set the saved software token value
     software_token_input.set_text(settings_data.software);
-
-    // set the saved remove token value
-   remove_token_input.set_active(settings_data.remove);
 }
 
 function buildPrefsWidget()
