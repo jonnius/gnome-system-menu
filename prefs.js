@@ -81,7 +81,7 @@ function widget_initliaze()
     // position
     position_box = new Gtk.Box({orientation: Gtk.Orientation.HORIZONTAL, margin_top: 15});
     position_label = new Gtk.Label({label: _("Position"), xalign: 0});
-    position_input = new Gtk.HScale.new_with_range(0, 25, 1);
+    position_input = Gtk.HScale.new_with_range(0, 25, 1);
 
     // software center
     software_token_box = new Gtk.Box({orientation: Gtk.Orientation.HORIZONTAL, margin_top: 15});
