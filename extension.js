@@ -1,5 +1,5 @@
 /*
- This file has been developed by Albert Palacios. 
+ This file has been developed by Albert Palacios.
  This software may be used and distributed
  according to the terms of the GNU General Public License version 2.
 
@@ -24,6 +24,7 @@ const PopupMenu = imports.ui.popupMenu;
 const Panel = imports.ui.panel;
 const Tweener = imports.ui.tweener;
 const GnomeSession = imports.misc.gnomeSession;
+const LoginManager = imports.misc.loginManager
 
 const guuid = 'SystemMenu'
 const Gettext = imports.gettext.domain(guuid);
@@ -37,19 +38,21 @@ let settingsJSON,settings,settingsID;
 
 let extension;
 let list = [
-{ type: "command",	text: _("About This Computer"),	action: ['gnome-control-center','info']		},
-{ type: "desktop",	text: _("Software Update"),	action: 'update-manager.desktop'		},
-{ type: "desktop",	text: _("Software Center"),	action: 'org.gnome.Software.desktop'	},
+{ type: "command",	  text: _("About This Computer"), action: ['gnome-control-center', 'info-overview']},
+{ type: "desktop",	  text: _("Software Update"), action: 'update-manager.desktop'},
+{ type: "desktop",	  text: _("Software Center"), action: 'org.gnome.Software.desktop'},
+{ type: "separator"},
+{ type: "command",	   text: _("System Preferences"), action: ['gnome-control-center', '']},
+{ type: "desktop",	   text: _("Gnome Tweak Tool"), action: 'org.gnome.tweaks.desktop'},
+{ type: "separator"},
+{ type: "desktop",	   text: _("System Monitor"), action: 'gnome-system-monitor.desktop'},
+{ type: "forceQuit",   text: _("Force Quit"), action: ''},
 { type: "separator" },
-{ type: "desktop",	text: _("System Preferences"),	action: 'gnome-control-center.desktop'		},
-{ type: "desktop",	text: _("Gnome Tweak Tool"),	action: 'gnome-tweak-tool.desktop'		},
+{ type: "powerOff",	   text: _("Power Off") + _(" and ") + _("Reboot"), action: ''},
+{ type: "logOut",      text: _("Log Out"), action: ''},
 { type: "separator" },
-{ type: "desktop",	text: _("System Monitor"),		action: 'gnome-system-monitor.desktop'		},
-{ type: "forceQuit",	text: _("Force Quit"),		action: ''					},
-{ type: "separator" },
-{ type: "powerOff",	text: _("Power Off"),		action: ''					},
-{ type: "command",	text: _("Log Out"),		action: ['gnome-session-quit']			},
-{ type: "command",	text: _("Lock"),			action: ['gnome-screensaver-command','-l']	},
+{ type: "suspend",     text: _("Suspend"), action: ''},
+{ type: "lockScreen",  text: _("Lock"), action: ''},
 {}
 ];
 
@@ -62,7 +65,7 @@ const extensionObject = new Lang.Class({
 		this.forceQuitPtr = null;
 		this.forceQuitPids = null;
 
-		let icon = new St.Icon({ icon_name: 'emblem-default-symbolic', 
+		let icon = new St.Icon({ icon_name: 'emblem-default-symbolic',
 					 style_class: 'system-status-icon' });
 		let label = new St.Label({ text: "" });
 		this.parent(0.0, label.text);
@@ -127,16 +130,43 @@ const extensionObject = new Lang.Class({
 			};
 
 			if (list[x].type=="powerOff") {
-
 				item = new PopupMenu.PopupMenuItem(_(list[x].text));
 				item.connect('activate', Lang.bind(this, function() {
-					let _Session = new GnomeSession.SessionManager();
-					_Session.ShutdownRemote();
+					let session = new GnomeSession.SessionManager();
+					session.ShutdownRemote();
 				} ));
 				this.menu.addMenuItem(item);
 			};
+
+			if (list[x].type=="logOut") {
+				item = new PopupMenu.PopupMenuItem(_(list[x].text));
+				item.connect('activate', Lang.bind(this, function() {
+					let session = new GnomeSession.SessionManager();
+					session.LogoutRemote(0);
+
+				} ));
+				this.menu.addMenuItem(item);
+			};
+
+			if (list[x].type=="suspend") {
+				item = new PopupMenu.PopupMenuItem(_(list[x].text));
+				item.connect('activate', Lang.bind(this, function() {
+					let login = new LoginManager.getLoginManager();
+					login.suspend();
+				} ));
+				this.menu.addMenuItem(item);
+			};
+
+			if (list[x].type=="lockScreen") {
+				item = new PopupMenu.PopupMenuItem(_(list[x].text));
+				item.connect('activate', Lang.bind(this, function() {
+					Main.screenShield.lock(true);
+				} ));
+				this.menu.addMenuItem(item);
+			};
+
 		};
-		
+
 		this.actor.connect('button-press-event', Lang.bind(this, this._updateForceQuit));
 	},
 
@@ -178,7 +208,7 @@ function init(metadata) {
 function enable() {
 
 	settings = JSON.parse(settingsJSON.get_string("settings-json"));
-	settingsID = settingsJSON.connect("changed::settings-json", Lang.bind(this,onSettingsChanged)); 
+	settingsID = settingsJSON.connect("changed::settings-json", Lang.bind(this,onSettingsChanged));
 
 	extension = new extensionObject();
 	Main.panel.addToStatusArea(guuid, extension, settings.position, settings.area);
