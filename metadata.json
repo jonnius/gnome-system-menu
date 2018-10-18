@@ -8,9 +8,9 @@
     "3.22",
     "3.24",
     "3.26",
-    "3.28",
+    "3.28"
   ],
   "url": "http://github.com/jonnius/gnome-system-menu",
   "uuid": "SystemMenu@jonnius.github.com",
-  "version": 2
+  "version": 3
 }

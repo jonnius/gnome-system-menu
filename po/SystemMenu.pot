@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-22 12:15+0200\n"
+"POT-Creation-Date: 2018-10-18 20:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,42 +45,54 @@ msgstr ""
 msgid "Save Settings"
 msgstr ""
 
-#: extension.js:40
+#: extension.js:41
 msgid "About This Computer"
 msgstr ""
 
-#: extension.js:41
+#: extension.js:42
 msgid "Software Update"
 msgstr ""
 
-#: extension.js:42
+#: extension.js:43
 msgid "Software Center"
 msgstr ""
 
-#: extension.js:44
+#: extension.js:45
 msgid "System Preferences"
 msgstr ""
 
-#: extension.js:45
+#: extension.js:46
 msgid "Gnome Tweak Tool"
 msgstr ""
 
-#: extension.js:47
+#: extension.js:48
 msgid "System Monitor"
 msgstr ""
 
-#: extension.js:48 extension.js:153 extension.js:157
+#: extension.js:49 extension.js:183 extension.js:187
 msgid "Force Quit"
 msgstr ""
 
-#: extension.js:50
+#: extension.js:51
 msgid "Power Off"
 msgstr ""
 
 #: extension.js:51
-msgid "Log Out"
+msgid " and "
+msgstr ""
+
+#: extension.js:51
+msgid "Reboot"
 msgstr ""
 
 #: extension.js:52
+msgid "Log Out"
+msgstr ""
+
+#: extension.js:54
+msgid "Suspend"
+msgstr ""
+
+#: extension.js:55
 msgid "Lock"
 msgstr ""
