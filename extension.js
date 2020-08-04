@@ -40,7 +40,7 @@ let extension;
 let list = [
 { type: "command",	  text: _("About This Computer"), action: ['gnome-control-center', 'info-overview']},
 { type: "desktop",	  text: _("Software Update"), action: 'update-manager.desktop'},
-{ type: "desktop",	  text: _("Software Center"), action: 'org.gnome.Software.desktop'},
+{ type: "command",	  text: _("Software Center"), action: ['env', 'BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/snap-store_ubuntu-software.desktop', '/snap/bin/snap-store.ubuntu-software']},
 { type: "separator"},
 { type: "command",	   text: _("System Preferences"), action: ['gnome-control-center', '']},
 { type: "desktop",	   text: _("Gnome Tweak Tool"), action: 'org.gnome.tweaks.desktop'},
