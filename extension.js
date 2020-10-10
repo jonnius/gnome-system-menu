@@ -22,7 +22,6 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Panel = imports.ui.panel;
-const Tweener = imports.ui.tweener;
 const GnomeSession = imports.misc.gnomeSession;
 const LoginManager = imports.misc.loginManager
 
