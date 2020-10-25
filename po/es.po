@@ -1,29 +1,38 @@
 msgid "About This Computer"
-msgstr "Acerca de este ordenador"
+msgstr "Acerca del Dispositivo"
 
 msgid "Software Update"
-msgstr "Actualización de software"
+msgstr "Actualización de Software"
 
 msgid "Software Center"
-msgstr "Centro de programas"
+msgstr "Centro de Programas"
 
 msgid "System Preferences"
-msgstr "Preferencias del sistema"
+msgstr "Preferencias del Sistema"
 
 msgid "Gnome Tweak Tool"
-msgstr "Preferencias de Gnome"
+msgstr "Retoques de Gnome"
 
 msgid "System Monitor"
-msgstr "Monitor del sistema"
+msgstr "Monitor del Sistema"
 
 msgid "Force Quit"
-msgstr "Terminar"
+msgstr "Forzar Salida"
 
 msgid "Power Off"
-msgstr "Apagar el sistema"
+msgstr "Apagar"
+
+msgid " and "
+msgstr " y "
+
+msgid "Reboot"
+msgstr "Reiniciar"
+
+msgid "Suspend"
+msgstr "Suspender"
 
 msgid "Log Out"
-msgstr "Cerrar sessión"
+msgstr "Cerrar Sesión"
 
 msgid "Lock"
 msgstr "Bloquear"
@@ -47,7 +56,7 @@ msgid "Save Settings"
 msgstr "Guardar Configuración"
 
 msgid "Clean user status menu"
-msgstr "Limpiar el menu de usuario"
+msgstr "Limpiar el Menú de Usuario"
 
 msgid "Yes"
 msgstr "Si"
