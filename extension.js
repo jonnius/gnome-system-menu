@@ -47,7 +47,7 @@ let list = [
 { type: "desktop",	   text: _("System Monitor"), action: 'gnome-system-monitor.desktop'},
 { type: "forceQuit",   text: _("Force Quit"), action: ''},
 { type: "separator" },
-{ type: "powerOff",	   text: _("Power Off") + _(" and ") + _("Reboot"), action: ''},
+{ type: "powerOff",	   text: _("Reboot"), action: ''},
 { type: "logOut",      text: _("Log Out"), action: ''},
 { type: "separator" },
 { type: "suspend",     text: _("Suspend"), action: ''},
