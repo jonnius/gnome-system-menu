@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 08:36+0100\n"
+"PO-Revision-Date: 2023-03-18 19:47+0100\n"
+"Last-Translator: Amerey.eu <info@amerey.eu>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: prefs.js:63
+msgid "Area"
+msgstr "Oblast"
+
+#: prefs.js:65
+msgid "Left"
+msgstr "Vlevo"
+
+#: prefs.js:65
+msgid "Center"
+msgstr "Uprostřed"
+
+#: prefs.js:65
+msgid "Right"
+msgstr "Vpravo"
+
+#: prefs.js:73
+msgid "Position"
+msgstr "Umístění"
+
+#: prefs.js:78
+msgid "Software center"
+msgstr "Centrum softwaru"
+
+#: prefs.js:84
+msgid "Save Settings"
+msgstr "Uložit nastavení"
+
+#: extension.js:40
+msgid "About This Computer"
+msgstr "O tomto PC"
+
+#: extension.js:41
+msgid "Software Update"
+msgstr "Aktualizace softwaru"
+
+#: extension.js:42
+msgid "Software Center"
+msgstr "Centrum softwaru"
+
+#: extension.js:44
+msgid "System Preferences"
+msgstr "Předvolby systému"
+
+#: extension.js:45
+msgid "Gnome Tweak Tool"
+msgstr "Nástroj Gnome Tweak Tool"
+
+#: extension.js:47
+msgid "System Monitor"
+msgstr "Monitorování systému"
+
+#: extension.js:48 extension.js:182 extension.js:186
+msgid "Force Quit"
+msgstr "Vynutit ukončení"
+
+#: extension.js:50
+msgid "Reboot"
+msgstr "Restartovat"
+
+#: extension.js:51
+msgid "Log Out"
+msgstr "Odhlásit"
+
+#: extension.js:53
+msgid "Suspend"
+msgstr "Suspendovat"
+
+#: extension.js:54
+msgid "Lock"
+msgstr "Uzamknout"
